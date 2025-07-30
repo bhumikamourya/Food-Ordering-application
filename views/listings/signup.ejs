@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Delight - Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+        <div class="row ">
+            <div class="col-6 offset-2 mt-3">
+                <div class="login-container">
+                    <div class="login-form location-setting home-menu-main">
+                        <form class="login-form location-setting home-menu-main">
+                        <h1>Sign Up</h1>
+                        <input placeholder="Your name" type="text" class="login-form-input form-control" required />
+                        <input placeholder="Your email" type="email" class="login-form-input form-control" required />
+                        <input placeholder="Password" type="password" class="login-form-input form-control" required />
+                        <button class="login-form-input mt-4">Create account</button>
+                        <br>
+                        <p><input class="form-check-input mt-0 form-control" type="checkbox" required />&nbsp; By continuing, i agree
+                            to the terms of use & privacy policy.
+                        </p>
+                        </form>
+                    </div>
+                    <div class=" login-create-btn login-create-btn-reverse location-setting home-menu-main">
+                        <h1>Welcome Back!</h1>
+                        <h5>Already have an account?</h5>
+                        <form method="GET" action="/login">
+                        <a href="https://localhost:8080/login">
+                            <button class="btn btn-outline-light p-2">Login</button>
+                        </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

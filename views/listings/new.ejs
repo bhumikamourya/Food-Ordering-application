@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerplate")%>
+
+  <body >
+    <div class="row">
+     <div class="col-8 offset-2 mt-3" >
+    <h3>Create a New Listing</h3>
+    <form method="post" action="/home-menu" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" required/>
+        <div class="valid-feedback">Title Looks Good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea name="listing[Description]" placeholder="enter description" class="form-control" required></textarea>
+        <div class="invalid-feedback">Please enter a short description</div>
+
+      </div>
+      <div class="mb-3">
+        <label for="Image" class="form-label">Upload Food Image</label>
+        <input name="listing[Image]"  type="file" class="form-control" required/>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="Price" class="form-label">Price</label>
+          <input name="listing[Price]" placeholder="200" class="form-control" required/>
+          <div class="invalid-feedback">Price should be valid!</div>
+
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="Category" class="form-label">Category</label>
+          <input name="listing[category]" placeholder="Enter Food Category" type="text" class="form-control" required/>
+          <div class="invalid-feedback">Category name should be valid!</div>
+
+        </div>
+      </div>
+      <button class="btn btn-dark add-btn mb-3">Add</button>
+    </form>
+    </div>
+    </div>
+  </body>

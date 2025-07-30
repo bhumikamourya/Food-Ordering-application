@@ -1,0 +1,176 @@
+const samplefood = [{
+    title: "Butter Chicken",
+    Description: "Creamy tomato-based curry with tender chicken pieces, flavored with Indian spices.",
+    Price: 320,
+    category: "Main Courses",
+    Image: "https://th.bing.com/th/id/OIP.t8fjuBtoCx7eoPznO9wgzgHaHa?rs=1&pid=ImgDetMain",
+},
+
+{
+    title: "Paneer Tikka Masala",
+    Description: "Chunks of grilled paneer cooked in a rich, spicy gravy with capsicum and onions.",
+    Price: 280,
+    category: "Main Courses",
+    Image: "https://th.bing.com/th/id/OIP.2_3_U6AJC4zb8jPK4FiMugHaHa?rs=1&pid=ImgDetMain",
+},
+{
+    title: "Chole Bhature",
+    Description: "Spiced chickpeas served with deep - fried fluffy bread – a North Indian classic.",
+    Price: 150,
+    category: "Main Courses",
+    Image: " https://th.bing.com/th/id/OIP.KEQk9FEnedD6iZBw9xWzgAHaE8?rs=1&pid=ImgDetMain",
+},
+{
+    title: "Hyderabadi Biryani",
+    Description: "Layered rice and marinated meat, cooked with saffron and herbs in dum style.",
+    Price: 300,
+    category: "Main Courses",
+    Image: "https://th.bing.com/th/id/OIP.l62xwzjz4Hd3ueArOt4lugHaHa?rs=1&pid=ImgDetMain",
+},
+
+{
+    title: "Rajma Chawal",
+    Description: "Kidney beans in tomato gravy served with steamed basmati rice.",
+    Price: 190,
+    category: "Main Courses",
+    Image: "https://media.istockphoto.com/id/1432801373/photo/rajma-chawal-is-a-popular-north-indian-food-rajma-is-a-socked-red-kidney-beans-cooked-with.jpg?s=612x612&w=0&k=20&c=2rXmEpF7rG1FuBmx55fHmrsrcROa0jkY4PHbcnRVtag=",
+},
+
+{
+    title: "Samosa(2 pcs)",
+    Description: " Deep - fried pastry filled with spiced potatoes and peas.",
+    Price: 40,
+    category: "Breakfast",
+    Image: "https://th.bing.com/th/id/OIP.PkUFCnJRsUNdWSkb_vQsZQHaHa?rs=1&pid=ImgDetMain",
+},
+
+{
+    title: "Pav Bhaji",
+    Description: "Mumbai street - style mashed vegetables in buttery spices served with pav.",
+    Price: 120,
+    category: "Breakfast",
+    Image: "https://th.bing.com/th/id/OIP.dhYmkmMqlXg4sjoCC8nKcwHaFZ?rs=1&pid=ImgDetMain",
+},
+
+{
+    title: "Pani Puri",
+    Description: "Crispy puris filled with spicy water, mashed potatoes, and tangy chutneys.",
+    Price: 60,
+    category: "Breakfast",
+    Image: "https://th.bing.com/th/id/OIP.DkVcFNJ2rkvh8i74gLPQdwHaEK?rs=1&pid=ImgDetMain",
+},
+{
+    title: "Gulab Jamun(2 pcs)",
+    Description: "Soft milk - solid balls soaked in rose - flavored sugar syrup.",
+    Price: 60,
+    category: "Desserts",
+    Image: "https://th.bing.com/th/id/OIP.-qv54MM8JTn77r5NRG7fhAHaHa?rs=1&pid=ImgDetMain",
+},
+{
+    title: "Rasgulla(2 pcs)",
+    Description: "Bengali spongy balls made from chenna, soaked in light sugar syrup.",
+    Price: 70,
+    category: "Desserts",
+    Image: "https://wallpaperaccess.com/full/8980239.jpg",
+},
+{
+    title: " Jalebi",
+    Description: "Crispy, deep - fried spirals soaked in saffron - flavored sugar syrup.",
+    Price: 50,
+    category: "Desserts",
+    Image: "https://th.bing.com/th/id/OIP.limJJrTodUMd-Wv1V87c_gHaE8?rs=1&pid=ImgDetMain",
+},
+{
+    title: "Mango Lassi",
+    Description: "Refreshing yogurt - based mango drink, sweet and creamy.",
+    Price: 90,
+    category: "Drinks",
+    Image: "https://th.bing.com/th/id/R.6a2d43be149a270af28c058dd21f7632?rik=3ZNZfED2kMyE2w&riu=http%3a%2f%2fcookclickndevour.com%2fwp-content%2fuploads%2f2016%2f05%2fmango-lassi-recipe-c.jpg&ehk=qata%2fAfHN9Lno4B31yb7IaQC2bXxjeftOg1F31a7yYg%3d&risl=&pid=ImgRaw&r=0",
+},
+{
+    title: "Masala Chai",
+    Description: "Indian spiced tea brewed with ginger, cardamom, and milk.",
+    Price: 30,
+    category: "Chai",
+    Image: " https://static.toiimg.com/photo/msid-69027241/69027241.jpg?1015830",
+},
+{
+    title: "Spicy Szechuan Beef",
+    Description: "Tender slices of beef, wok-tossed in a fiery Szechuan peppercorn sauce, offering a numbing and tantalizing experience.",
+    Price: 200,
+    category: "Chinese",
+    Image: "https://tse3.mm.bing.net/th/id/OIP.kDlcxxb5OKcS0GgmRx1mcQHaIz?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+},
+{
+    title: "Spring Rolls",
+    Description: "It’s a dish that holds a Crispy roll filled with vegetables or meat, and it is a must-to-be dish on the Chinese food list as people love it as a street food.",
+    Price: 150,
+    category: "Chinese",
+    Image: "https://img1.paisawapas.com/images/2024/11/12115321/Chinese-Spring-Rolls.jpg",
+
+},
+{
+    title: "Dumplings (Jiaozi)",
+    Description: " Flour wrappers, ground pork or shrimp, cabbage, ginger, garlic, soy sauce, sesame oil.",
+    Price: 170,
+    category: "Chinese",
+    Image: "https://img1.paisawapas.com/images/2024/11/12115530/Dumplings.jpg",
+},
+{
+    title: "Chow Mein",
+    Description: " Egg noodles, cabbage, carrots, bell peppers, chicken or shrimp, soy sauce, garlic",
+    Price: 190,
+    category: "Chinese",
+    Image: "https://img1.paisawapas.com/images/2024/11/12121606/Chow-Mein.jpg",
+},
+{
+    title: "Margarita",
+    Description: "Our best margarita recipe is simple and classic, with fresh lime balanced by crisp tequila and citrusy orange liqueur",
+    Price: 250,
+    category: "Cocktail",
+    Image: "https://www.acouplecooks.com/wp-content/uploads/2023/11/Patron-Margarita-0001.jpg",
+},
+{
+    title: "Espresso Martini",
+    Description: "One of the most popular cocktails in internet searches that surprised us was the Espresso Martini! Here bittersweet coffee pairs perfectly with the rich sweetness of Kahlua.",
+    Price: 300,
+    category: "Cocktail",
+    Image: "https://www.acouplecooks.com/wp-content/uploads/2023/06/Espresso-Martini-051.jpg",
+},
+{
+    title: "Nescafé Classic",
+    Description:"Nescafé Classic is made from 100% Robusta coffee beans, which are roasted and then brewed before being dried into granules or powder. ",
+    Price: 250,
+    category:"Coffee",
+    Image:"https://s2.best-wallpaper.net/wallpaper/iphone/1807/Nescafe-coffee-coffee-beans-red-cup_iphone_640x960.jpg",
+},
+{
+    title: "Bru Instant Coffee",
+    Description:"Bru Instant Coffee is made by carefully selecting and roasting coffee beans, then blending them (in some versions) with chicory — a plant root that's roasted and ground, giving the coffee a fuller body and a slightly nutty taste.",
+    Price: 220,
+     category:"Coffee",
+    Image:"https://www.recipesaresimple.com/wp-content/uploads/2015/09/bru-coffee-recipe-with-video-300x283.jpg",
+},
+{
+    title: "Lavazza Super Crema",
+    Description:"Lavazza Super Crema is crafted for espresso lovers who want a velvety crema and a balanced, nuanced taste without overpowering bitterness. ",
+    Price: 1500,
+     category:"Coffee",
+     Image:"https://th.bing.com/th/id/R.3c67e53d682589dcb8ce02dd3ac1e20c?rik=LeUqj%2bnBd3%2f0WA&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f11%2f17%2f239445-coffee-coffee_beans-cup.jpg&ehk=%2bEd%2bhMjaHGMrExklwM9MNbALfkaDNqvDmS67gs%2bf2OA%3d&risl=&pid=ImgRaw&r=0"
+},
+{
+    title: "Vanilla Icecream",
+    Description:"Vanilla ice cream is a timeless dessert loved around the world for its delicate yet comforting flavor. It’s made by blending dairy with sugar and vanilla extract or vanilla beans, then churning it to create a light, creamy texture.",
+    Price: 180,
+    category:"Ice cream",
+     Image:"https://tse4.mm.bing.net/th/id/OIP.vYfOJvm58KNSgqX4zklyPwAAAA?r=0&w=474&h=316&rs=1&pid=ImgDetMain&o=7&rm=3"
+},
+{
+     title:"Margherita Pizza",
+     Description:"A timeless classic straight from Naples. Our wood-fired Margherita Pizza features hand-stretched dough, rich San Marzano tomato sauce, fresh mozzarella di bufala, and fragrant basil leaves.",
+     Price:719,
+     category:"Itailian",
+     Image:"https://tse2.mm.bing.net/th/id/OIP.NO3r2ObyGDzkVT4QC_qATwHaLH?r=0&w=768&h=1152&rs=1&pid=ImgDetMain&o=7&rm=3",
+},
+];
+module.exports = { data: samplefood };

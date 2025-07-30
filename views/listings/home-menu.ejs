@@ -1,0 +1,178 @@
+<% layout("/layouts/boilerplate")%>
+    <main class="home-menu-main location-setting ">
+        <div class="home-menu-container1 ">
+            <img
+                src="https://cdn.dribbble.com/userupload/32931367/file/original-5d5f1261019ff0f906deeb40cd9a2f33.jpg?resize=1200x750&vertical=center" />
+            <h1 class="home-menu-main-content">Order your <br>favourite food here</h1>
+            <p class="home-menu-main-content-para">Choose from a diverse menu featuring a delectable array of dishes
+                crafted with
+                <br>the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate
+                <br>your dining experience, one delicious meal at a time.
+            </p>
+            <a href="#dishes-section">
+            <button class="view-menu-btn  btn btn-outline-danger">View Menu</button>
+            </a>
+        </div>
+        <div class="home-menu-container2 ">
+            <section id="menu-section">
+                <h2>Explore our menu</h2>
+                <p>Choose from a diverse menu featuring a delectable array of dishes.Our mission is to satisfy your<br>
+                    cravings and elevate
+                    your dining experience, one delicious meal at a time .</p>
+                <div class="menu-container">
+                    <div class="menu">
+                        <img src="https://img.freepik.com/premium-photo/indian-food-menu_975022-77.jpg" />Main Courses
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://tse1.mm.bing.net/th/id/OIP._xb1DZustP4m6Tpx-cLGfAHaHN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" />Breakfast
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://i0.wp.com/cookingfromheart.com/wp-content/uploads/2017/12/Ginger-Tea-3.jpg?w=683&ssl=1" />Chai
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://th.bing.com/th/id/OIP.RNU40oIz9jSFEsH1tbbNFwHaE8?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" />Chinese
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.8y-2lq46YHjUA1C6fl5JFgHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" />Cocktail
+                    </div>
+                    <div class="menu">
+                        <img src="https://beanmastery.com/wp-content/uploads/2023/10/cafe-latte-1024x574.jpg" />Coffee
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://tse3.mm.bing.net/th/id/OIP.ECEIVblVFKMEqo-oW_CUDQHaFm?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" />Drinks
+                    </div>
+                    <div class="menu">
+                        <img
+                            src="https://agronfoodprocessing.com/wp-content/uploads/2023/06/ASHARAM-ICE-CREAM-BACKGROUND-IMAGE-300x205.png" />Ice
+                        cream
+                    </div>
+                    <div class="menu">
+                        <img src="https://wallpapercave.com/wp/wp4289092.jpg" />Itailian
+                    </div>
+                    <div class="menu">
+                        <img src="" />Desserts
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class=" home-menu-container2">
+            <section id="dishes-section">
+            <h2>
+                Top dishes near you
+            </h2>
+                <div class="menu-items">
+                    <% for(let listing of alllisting) { %>
+                        <a href="/home-menu/<%=listing._id%>">
+                            <div class="menu-item">
+                                <img src="<%= listing.Image %>" class="menu-card-img">
+                                <div class="item-details">
+                                    <div class="item-name">
+                                        <%= listing.title %>
+                                    </div>
+                                    <div class="item-description">
+                                        <%= listing.Description %>
+                                    </div>
+                                    <div class="item-footer">
+                                        <i class="item-price"> &#8377;
+                                             <%= listing.Price.toLocaleString("en-IN") %>
+                                        </i>
+                                        <button class="add-to-cart btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <% } %>
+            <form method="GET" action="/home-menu/new">
+                    <button class="btn menu-item add-items">
+                            <img src="https://img.icons8.com/?size=100&id=1501&format=png&color=000000"
+                                class="add-items-img">
+                    </button>
+            </form>
+            </section>
+        </div>
+        <div class=" home-menu-container2 box discount-card ">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/50-percent-discount-9059213-7479286.png">
+            <div class="mt-2">
+                <h3 style="font-weight: 700;">Special Food Order Discount</h3>
+                <b>
+                    <h1 style="font-weight: 1000;">50% OFF</h1>
+                </b>
+                <h5>Order your favorite meals now and enjoy great savings!</h5>
+            </div>
+        </div>
+
+        <br>
+        <h2>What's <b>trending?</b></h2>
+        <div class="box home-menu-container2 " style="height: 40vh;">
+            <div class="main-trend-box">
+                <article class="food-card box">
+                    <div class="food-info">
+                        <h2 class="food-title">Pepperoni Pizza</h2>
+                        <p class="food-desc">Classic tasty pepperoni with a crispy crust and rich tomato sauce
+                            topped with mozzarella cheese.</p>
+                        <div class="food-footer location-setting">
+                            <span class="item-price">&#8377;432.03</span>
+                            <span class="food-rating sign-in-btn" aria-label="4.7 out of 5 stars">⭐ 4.7</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card box">
+                    <div class="food-info">
+                        <h2 class="food-title ">Avocado Toast</h2>
+                        <p class="food-desc">Smashed ripe avocados on toasted sourdough, drizzled with olive oil
+                            and sprinkled with chili flakes.</p>
+                        <div class="food-footer location-setting">
+                            <span class="item-price">&#8377;723.11</span>
+                            <span class="food-rating sign-in-btn" aria-label="4.5 out of 5 stars">⭐ 4.5</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="food-card box ">
+                    <div class="food-info ">
+                        <h2 class="food-title">Sushi Platter</h2>
+                        <p class="food-desc">An assorted platter of fresh sushi including salmon, tuna, and
+                            avocado rolls.</p>
+                        <div class="food-footer location-setting">
+                            <span class="item-price">&#8377;473</span>
+                            <span class="food-rating sign-in-btn " aria-label="4.9 out of 5 stars">⭐ 4.9</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <br>
+        <h2>When in doubt, <b>Order Desi!</b></h2>
+        <div class="box home-menu-container2" style="height: 600px;">
+            <p class="para1">Too lazy to cook or bored of ghar ka khana?<br>
+                Tired of scrolling through restaurants or stuck on a concall?
+                Whatvever the reason, When In Doubt,Order Desi!<br><br>
+                From <b>Dal Makhni</b> to <b>Amritsari Chole Chawal</b> to <b>Butter Cheichen</b> to
+                <b>Gulab
+                    jamun</b>,we have all of your delicious Desi Meals.
+                <br><br>
+                <img src="https://media.istockphoto.com/id/1432801373/photo/rajma-chawal-is-a-popular-north-indian-food-rajma-is-a-socked-red-kidney-beans-cooked-with.jpg?s=612x612&w=0&k=20&c=2rXmEpF7rG1FuBmx55fHmrsrcROa0jkY4PHbcnRVtag="
+                    class="pic1">
+                <img src="https://wallpaperaccess.com/full/8980239.jpg" class="pic2">
+                <br>
+                <br>
+                <img src="https://th.bing.com/th/id/OIP.wUKYjv69hIOMD5sc8I4JVAHaEK?rs=1&pid=ImgDetMain" class="pic2">
+                <img src="https://th.bing.com/th/id/OIP.2_3_U6AJC4zb8jPK4FiMugHaHa?rs=1&pid=ImgDetMain" class="pic1">
+
+            </p>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        const menuOpenButton = document.querySelector("#menu-open-button");
+        const menuCloseButton = document.querySelector("#menu-close-button");
+        menuOpenButton.addEventListener("click", () => {
+            document.body.classList.toggle("menu-open");
+        })
+        menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+    </script>

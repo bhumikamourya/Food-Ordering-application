@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+  @media(max-width: 768px) {
+    .show-card ,.item-card {
+      width: 100%;
+      flex-wrap: wrap
+    }
+
+    
+  };
+</style>
+  <div class="show-card">
+    <div class=" item-card cart-section">
+      <div>
+        <h2 class="section-title">
+          <%= listing.title %>
+        </h2>
+      </div>
+      <div>
+        <img src="<%=listing.Image%>" class="item-img">
+        <p>
+          <%= listing.Description %>
+        </p>
+        <p>&#8377; <%= listing.Price.toLocaleString("en-IN") %>
+        </p>
+        <div>category : <%=listing.category%>
+        </div>
+      </div>
+      <div class="show-btns">
+
+        <a href="/home-menu/<%= listing._id %>/edit" class="btn btn-outline-success"> 
+          <!-- only owner can cahnge the edit page -->
+          Edit </a>
+        <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
+          <a href="#" class="btn btn-danger">Delete </a>
+          <a href="" class="btn btn-dark " >
+          Add </a>
+      </div>
+      </form>
+    </div>
+    <div class="item-card cart-section">
+      <h2 class="section-title">Your Order</h2>
+
+      <div class="cart-items">
+        <!-- Cart items will be added here dynamically -->
+        <div class="empty-cart-message">Your cart is empty</div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Fee</span>
+          <span>$2.99</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span>$2.99</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  
+  <div class="row ">
+    <div class="col-8 offset-2 mt-3">
+      <h3>Delivery Information</h3>
+      <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text"  placeholder="Enter your name" class="form-control">
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Delivery Address</label>
+          <input type="text"  placeholder="123 Main St, Apt 4" class="form-control">
+      </div>
+      <div class="mb-3">
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel"  placeholder="+91 1232473421" class="form-control">
+        </div>
+      </div>
+      <button class="btn btn-success  mb-3">Place Order</button>
+    </div>
+    
+  </div>

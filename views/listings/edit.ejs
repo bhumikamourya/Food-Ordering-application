@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate")%>
+  <body>
+    <div class="row">
+      <div class="col-8 offset-2 mt-3">
+        <h3>Edit your Food </h3>
+        <form method="post" action="/home-menu/<%= listing._id %>?_method=PUT"novalidate class="needs-validation" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="title" class="form-label">Food Title</label>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required />
+            <div class="valid-feedback">Title Looks Good!</div>
+
+          </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea name="listing[Description]" class="form-control" required><%= listing.Description %></textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+
+          </div>
+          <div class="mb-3">
+           <img src="<%= originalImageUrl %>" class="item-card"/>
+          </div>
+          <div class="mb-3">
+            <label for="Image" class="form-label">Upload New Image</label>
+            <input name="listing[Image]" type="file"  class="form-control" />
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col-md-4">
+              <label for="Price" class="form-label">Price</label>
+              <input name="listing[Price]" value="<%= listing.Price %>" type="number" class="form-control" required/>
+              <div class="invalid-feedback">Price should be valid!</div>
+
+            </div>
+            <div class="mb-3 col-md-8">
+              <label for="category" class="form-label">Food Category</label>
+              <input name="listing[category]" value="<%= listing.category %>" type="text" class="form-control" required/>
+              <div class="invalid-feedback">food category name should be valid!</div>
+
+            </div>
+          </div>
+          <button class="btn btn-dark edit-btn mb-3">Edit</button>
+        </form>
+      </div>
+    </div>
+  </body>
