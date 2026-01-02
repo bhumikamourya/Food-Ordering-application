@@ -1,48 +1,48 @@
 <% layout("/layouts/boilerplate")%>
 <style>
   @media(max-width: 768px) {
-    .show-card ,.item-card {
+    /* .show-card ,.item-card {
       width: 100%;
       flex-wrap: wrap
-    }
+    } */
 
     
   };
 </style>
-  <div class="show-card">
-    <div class=" item-card cart-section">
+  <div class=" container col-lg-8 col-md-10 offset-lg-2 offset-md-3">
+    <div class="p-4">
       <div>
         <h2 class="section-title">
-          <%= listing.title %>
+          <%= Items.title %>
         </h2>
       </div>
       <div>
-        <img src="<%=listing.Image%>" class="item-img">
+        <img src="<%=Items.Image%>" class="item-img">
         <p>
-          <%= listing.Description %>
+          <br>
+          <%= Items.Description %>
         </p>
-        <p>&#8377; <%= listing.Price.toLocaleString("en-IN") %>
+        <p>&#8377; <%= Items.Price.toLocaleString("en-IN") %>
         </p>
-        <div>category : <%=listing.category%>
+        <div>category : <%=Items.category%>
         </div>
       </div>
       <div class="show-btns">
 
-        <a href="/home-menu/<%= listing._id %>/edit" class="btn btn-outline-success"> 
+        <a href="/home-menu/<%= Items._id %>/edit" class="btn btn-outline-success m-2"> 
           <!-- only owner can cahnge the edit page -->
           Edit </a>
-        <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-          <a href="#" class="btn btn-danger">Delete </a>
-          <a href="" class="btn btn-dark " >
+        <form method="POST" action="/pages/<%=Items._id%>?_method=DELETE">
+          <a href="#" class="btn btn-danger mt-2">Delete </a>
+          <a href="" class="btn btn-dark m-2" >
           Add </a>
       </div>
       </form>
     </div>
-    <div class="item-card cart-section">
+    <!-- <div class="item-card cart-section">
       <h2 class="section-title">Your Order</h2>
 
       <div class="cart-items">
-        <!-- Cart items will be added here dynamically -->
         <div class="empty-cart-message">Your cart is empty</div>
       </div>
 
@@ -62,7 +62,7 @@
       </div>
 
       <button class="checkout-btn">Proceed to Checkout</button>
-    </div>
+    </div> -->
   </div>
   
   <div class="row ">
