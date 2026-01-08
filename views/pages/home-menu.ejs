@@ -10,7 +10,7 @@
                 <br>your dining experience, one delicious meal at a time.
             </p>
             <a href="#dishes-section">
-            <button class="view-menu-btn  btn btn-outline-danger">View Menu</button>
+                <button class="view-menu-btn  btn btn-outline-danger">View Menu</button>
             </a>
         </div>
         <div class="home-menu-container2 ">
@@ -62,9 +62,9 @@
         </div>
         <div class=" home-menu-container2">
             <section id="dishes-section">
-            <h2>
-                Top dishes near you
-            </h2>
+                <h2>
+                    Top dishes near you
+                </h2>
                 <div class="menu-items">
                     <% for(let listing of allItems) { %>
                         <a href="/home-menu/<%=listing._id%>">
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="item-footer">
                                         <i class="item-price"> &#8377;
-                                             <%= listing.Price.toLocaleString("en-IN") %>
+                                            <%= listing.Price.toLocaleString("en-IN") %>
                                         </i>
                                         <button class="add-to-cart btn">Add</button>
                                     </div>
@@ -87,12 +87,12 @@
                             </div>
                         </a>
                         <% } %>
-            <form method="GET" action="/home-menu/new">
-                    <button class="btn menu-item add-items">
-                            <img src="https://img.icons8.com/?size=100&id=1501&format=png&color=000000"
-                                class="add-items-img">
-                    </button>
-            </form>
+                            <form method="GET" action="/home-menu/new">
+                                <button class="btn menu-item add-items">
+                                    <img src="https://img.icons8.com/?size=100&id=1501&format=png&color=000000"
+                                        class="add-items-img">
+                                </button>
+                            </form>
             </section>
         </div>
         <div class=" home-menu-container2 box discount-card ">
@@ -147,7 +147,7 @@
         </div>
         <br>
         <h2>When in doubt, <b>Order Desi!</b></h2>
-        <div class="box home-menu-container2" style="height: 600px;">
+        <div class="box home-menu-container2 " style="height: 600px;">
             <p class="para1">Too lazy to cook or bored of ghar ka khana?<br>
                 Tired of scrolling through restaurants or stuck on a concall?
                 Whatvever the reason, When In Doubt,Order Desi!<br><br>
