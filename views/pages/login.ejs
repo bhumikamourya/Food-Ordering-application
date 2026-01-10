@@ -11,34 +11,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Akronim&family=Bungee+Spice&family=Montserrat:ital,wght@0,300;1,300&family=Rubik+Puddles&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="row ">
-        <div class="col-6 offset-2 mt-3">
-            <div class="login-container">
-                <div class="login-create-btn location-setting home-menu-main">
-                    <h1> Hello, Welcome!</h1>
-                    <h5>Don't have an account?</h5>
-                    <form method="get" action="/signup">
-                        <a href="https://localhost:8080/signup">
-                            <button  class="btn btn-outline-light p-2">Create account</button>
-                        </a>
-                    </form>
-                </div>
-                <div class="login-form location-setting home-menu-main">
-                    <h1>Login</h1>
-                    <form class="login-form location-setting home-menu-main">
-                    <input placeholder="Your email" type="email" class="login-form-input form-control" required />
-                    <input placeholder="Password" type="password" class="login-form-input form-control" required />
-                    <a href="">forgot Password?</a>
-                    <button type="submit" class="login-form-input mt-4">Login</button>
+        <div class=" d-flex justify-content-between position-fixed">
+            <div class="col-5  text-light bg-primary d-flex justify-content-center align-items-center flex-column login-styling ">
+                <h1 class="fw-6 lh-6"> Hello, Welcome!</h1>
+                <h5>Don't have an account?</h5>
+                <form method="get" action="/signup">
+                    <a href="https://localhost:8080/signup">
+                        <button class="btn btn-outline-light p-2">Create account</button>
+                    </a>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                <h1>Login</h1>
+                <form class="mt-3 p-3 text-center">
+                    <input placeholder="Your email" type="email" class=" form-control m-3" required />
+                    <input placeholder="Password" type="password" class="form-control m-3" required />
+                    <a href="" class="p-3">forgot Password?</a><br>
+                    <button type="submit" class="btn btn-success m-3 form-control">Login</button>
                     <br>
-                    <p><input class="form-check-input mt-0 form-control" type="checkbox" required />&nbsp; By continuing, i agree
+                    <p class="text-muted"><input class="mt-4" type="checkbox" required />&nbsp; By continuing, i agree
                         to the terms of use & privacy policy.
                     </p>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>

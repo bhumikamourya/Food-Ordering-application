@@ -10,10 +10,11 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     font-family: "Agbalumo", system-ui;
  }
 
  body {
-     background-color: rgb(252, 251, 251);
+     background-color: var(--light);
  }
 
  /* home page  */
@@ -25,7 +26,7 @@
      flex-direction: column;
      background-image: url("https://static.vecteezy.com/system/resources/previews/033/717/710/non_2x/a-sandwich-with-vegetables-and-tomatoes-on-it-ai-generated-free-photo.jpg");
      background-size: cover;
-     animation: gallery 60s linear infinite alternate;
+     animation: gallery 90s linear infinite ;
  }
 
  @keyframes gallery {
@@ -82,36 +83,25 @@
      position: absolute;
      top:13%;
      left: 2%;
-     color: white;
-     font-weight: bold;
-     border-radius: 5px;
-     z-index: 1;
+     color: var(--light);
 
  }
 
  .text {
-     text-shadow: 1px 1px 2px var(--dark);
-      font-family: "Agbalumo", system-ui;
+     text-shadow: 2px 2px 4px #000000;
+      /* font-family: "Agbalumo", system-ui; */
  }
 
  .skip-btn {
      position: absolute;
-     top: 10%;
+     top: 6%;
      left: 91%;
-     color: var(--dark);
-     background-color: var(--light);
-     font-size: 20px;
-     padding: 7px 15px;
-     opacity: 0.4;
+     background-color: var(--dark);
+     opacity: 0.6;
  }
-
- .skip-btn:hover {
-     background-color: rgb(231, 229, 229);
- }
-
  .app-name {
      position: absolute;
-     top: 25%;
+     top: 22%;
      left: 20%;
      color: var(--light);
      text-shadow: 2px 1px 2px var(--dark);
@@ -122,54 +112,39 @@
  .home-main-content {
      position: absolute;
      bottom: 5%;
-     text-align: center;
      color: var(--light);
-     padding: 20px 20px;
+     background-color: rgba(41, 43, 44,0.7);
  }
 
- .home-main-content,
- h5 {
-     margin-top: 0.5rem;
- }
-
- .flags-options {
-     display: flex;
-     justify-content: center;
- }
+ /* .home-main-content{
+     margin-top: 1rem;
+ } */
 
  .small-box {
-     width: 14%;
+     width: 15%;
      height: 2.5rem;
      margin-right: 0.3rem;
-     border-radius: 7.5px 7.5px;
-     border: 1px solid rgb(161, 162, 161);
  }
 
  .number-box {
      margin-left: 0.5rem;
-     border-radius: 7.5px 7.5px;
-     border: 1px solid rgb(161, 162, 161);
      width: 45.5%;
      height: 2.5rem;
  }
 
- .continue-btn {
+ /* .continue-btn {
      border-radius: 7.5px 7.5px;
      margin-top: 15px;
      width: 22.5rem;
      height: 2.5rem;
-     color: white;
+
      font-size: 1rem;
-     background-color: var(--primary);
-     ;
      border: none;
- }
+ } */
 
  .gmail-mail-icons img {
      border-radius: 50%;
-     border: 1px solid rgb(193, 194, 193);
-     padding: 0.4rem;
-     margin: 0.2rem;
+    padding: -2rem;
      width: 43px;
      height: 43px;
  }
@@ -523,64 +498,14 @@
      background-color: #FAF7F2;
  }
 
- .login-container {
-     position: fixed;
-     border-radius: 20px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-     margin-top: 5rem;
-     width: 65%;
-     height: 70vh;
-     display: flex;
-     justify-content: space-between;
+
+ .login-styling {
+     background-image: linear-gradient(#333333,#dd1818);
+     border-radius  :10% 95% 91% 0% / 0% 82% 81% 10% ;
+     box-shadow: 10px 5px 30px rgb(29, 29, 30);
+     height: 100vh;
  }
 
- .login-create-btn,
- .login-form {
-     width: 50%;
-     height: auto;
- }
-
- .login-create-btn {
-     color: white;
-     background-image: linear-gradient(rgb(237, 232, 224), rgb(206, 35, 35), rgb(138, 35, 23));
-     background-size: cover;
-     background-position: center;
-     border-radius: 4% 30% 30% 4%;
- }
-
- .login-create-btn-reverse {
-     border-radius: 30% 4% 4% 30%;
- }
-
- .login-create-btn h1,
- .login-form h1 {
-     font-weight: 700;
-     line-height: 200%;
- }
-
- .login-form {
-     width: 60%;
-     height: 90%;
-     margin: 0;
- }
-
- .login-form-input {
-     width: 100%;
-     padding: 0.7rem 0.7rem;
-     margin: 0.5rem;
-     border-radius: 10px;
-     border: 1px solid rgb(216, 214, 214);
- }
-
- .login-form button {
-     color: white;
-     font-weight: 600;
-     background-color: rgb(2, 159, 2);
- }
-
- .login-form a {
-     color: #161C2E;
- }
 
  /* add order in cart */
 
